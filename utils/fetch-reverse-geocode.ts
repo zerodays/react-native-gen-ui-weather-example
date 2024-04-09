@@ -1,5 +1,7 @@
 // https://nominatim.openstreetmap.org/reverse?lat=37.78825&lon=-122.4324&format=json
 
+import { wait } from "./wait";
+
 export const fetchLocation = async (lat: number, lon: number) => {
   const params = new URLSearchParams({
     lat: lat.toString(),
@@ -8,6 +10,8 @@ export const fetchLocation = async (lat: number, lon: number) => {
   });
 
   console.log(`↪️ Fetching Reverse GeoCode for [${lat}, ${lon}]`);
+
+  await wait(2000);
 
   const response = await fetch(
     `https://nominatim.openstreetmap.org/reverse?${params}`

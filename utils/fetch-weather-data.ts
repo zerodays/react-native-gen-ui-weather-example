@@ -1,4 +1,5 @@
 import { WeatherType } from "../components/weather";
+import { wait } from "./wait";
 
 export const fetchLatLng = async (location: string) => {
   const params = new URLSearchParams({
@@ -6,6 +7,8 @@ export const fetchLatLng = async (location: string) => {
   });
 
   console.log(`↪️ Fetching GeoCode for ${location}`);
+
+  await wait(2000);
 
   const response = await fetch(
     `https://geocoding-api.open-meteo.com/v1/search?${params}`
@@ -37,6 +40,8 @@ export const fetchWeatherData = async (location: string) => {
   });
 
   console.log(`↪️ Fetching Weather Data for [${latitude}, ${longitude}]`);
+
+  await wait(2000);
 
   const response = await fetch(
     `https://api.open-meteo.com/v1/forecast?${params}`
