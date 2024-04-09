@@ -2,7 +2,7 @@
 
 This repository serves as an example usage of the open-source React Native package called `react-native-gen-ui`. The package facilitates the integration of AI chat capabilities into React Native applications. In this example, we demonstrate how to effectively utilize the tools provided by `react-native-gen-ui` to obtain the user's location and fetch weather information based on that location.
 
-![weather-example-gif](docs/weather-example.gif)
+![weather-example-gif](docs/weather-example-min.gif)
 
 ## Features
 
