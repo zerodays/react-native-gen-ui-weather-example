@@ -5,7 +5,7 @@ import WeatherLoading from "../../assets/loading/weather.json";
 
 const LoadingWeather = () => {
   return (
-    <View className="w-32 h-16 -ml-6">
+    <View className="w-32 h-16 -ml-5">
       <LottieView
         source={WeatherLoading}
         resizeMode="cover"
